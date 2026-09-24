@@ -1,0 +1,68 @@
+[2026-09-23 18:07:28] ==== início extração Funil de Venda — Village Siena ====
+[2026-09-23 18:07:38] login ok
+[2026-09-23 18:07:57] ==== início extração Funil de Venda — Village Siena ====
+[2026-09-23 18:08:07] login ok
+[2026-09-23 18:08:32] filtros aplicados (funil=126, produto=428)
+[2026-09-23 18:08:32] total anunciado: 147 (3 página(s))
+[2026-09-23 18:08:32] página 1/3: +50 (acc 50/147)
+[2026-09-23 18:08:37] página 2/3: +50 (acc 100/147)
+[2026-09-23 18:08:41] página 3/3: +47 (acc 147/147)
+[2026-09-23 18:08:41] linhas coletadas: 147
+[2026-09-23 18:08:41] produtos na coleta (deve ser só "85 VILLAGIO SIENA"): {"85 VILLAGIO SIENA": 147}
+[2026-09-23 18:08:41] fichas 40/147
+[2026-09-23 18:08:47] fichas 80/147
+[2026-09-23 18:08:55] fichas 120/147
+[2026-09-23 18:09:04] fichas 147/147
+[2026-09-23 18:09:13] fichas buscadas: 147
+[2026-09-23 18:09:13] buscando contato de 6 corretor(es) novo(s)
+[2026-09-23 18:09:38] aviso: 4 corretor(es) não encontrados na listagem de usuários: ['CLAUDEIR COELHO ROCHA', 'João Paulo Mamede Rocha', 'Leonardo Augusto Alves Rodrigues', 'Thaylize Vargas Martins']
+[2026-09-23 18:09:38] contatos.tsv atualizado com 2 novo(s)
+[2026-09-23 18:09:38] tags distintas encontradas (12): ['AD', 'Até 24x', 'Até 48x', 'CONTRATO DIGITAL', 'CONTRATO FÍSICO', 'Cliente BrDU', 'FALTA PIX', 'Lead Quente', 'PIX', 'Plano longo', 'SECNEXO', 'Venda à vista']
+[2026-09-23 18:09:38] gravado C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\dados\rows_vendas.json — 147 cadastro(s)
+[2026-09-23 18:09:38] ==== fim — 101.5s ====
+[2026-09-24 10:28:07] ==== início extração Funil de Venda — Village Siena ====
+[2026-09-24 10:28:17] login ok
+[2026-09-24 10:28:40] filtros aplicados (funil=126, produto=428)
+[2026-09-24 10:28:40] total anunciado: 181 (4 página(s))
+[2026-09-24 10:28:40] página 1/4: +50 (acc 50/181)
+[2026-09-24 10:28:44] página 2/4: +50 (acc 100/181)
+[2026-09-24 10:28:48] página 3/4: +50 (acc 150/181)
+[2026-09-24 10:28:51] página 4/4: +31 (acc 181/181)
+[2026-09-24 10:28:51] linhas coletadas: 181
+[2026-09-24 10:28:51] produtos na coleta (deve ser só "85 VILLAGIO SIENA"): {"85 VILLAGIO SIENA": 181}
+[2026-09-24 10:28:51] fichas 40/181
+[2026-09-24 10:28:58] fichas 80/181
+[2026-09-24 10:29:04] fichas 120/181
+[2026-09-24 10:29:10] fichas 160/181
+[2026-09-24 10:29:17] fichas 181/181
+[2026-09-24 10:29:21] fichas buscadas: 181
+[2026-09-24 10:29:21] buscando contato de 4 corretor(es) novo(s)
+[2026-09-24 10:29:38] aviso: 4 corretor(es) não encontrados na listagem de usuários: ['CLAUDEIR COELHO ROCHA', 'João Paulo Mamede Rocha', 'Leonardo Augusto Alves Rodrigues', 'Thaylize Vargas Martins']
+[2026-09-24 10:29:38] contatos.tsv atualizado com 0 novo(s)
+[2026-09-24 10:29:38] tags distintas encontradas (14): ['AD', 'Até 24x', 'Até 48x', 'BOLETO NEXO', 'CONTRATO DIGITAL', 'CONTRATO FÍSICO', 'Cliente BrDU', 'Em lançamento de venda', 'FALTA PIX', 'Lead Quente', 'PIX', 'Plano longo', 'SECNEXO', 'Venda à vista']
+[2026-09-24 10:29:38] gravado C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\dados\rows_vendas.json — 181 cadastro(s)
+[2026-09-24 10:29:38] ==== fim — 91.0s ====
+[2026-09-24 14:51:26] ==== início extração Funil de Venda — Village Siena ====
+[2026-09-24 14:51:37] login ok
+[2026-09-24 14:51:57] filtros aplicados (funil=126, produto=428)
+[2026-09-24 14:51:57] total anunciado: 209 (5 página(s))
+[2026-09-24 14:51:57] página 1/5: +50 (acc 50/209)
+[2026-09-24 14:52:02] página 2/5: +50 (acc 100/209)
+[2026-09-24 14:52:06] página 3/5: +50 (acc 150/209)
+[2026-09-24 14:52:10] página 4/5: +50 (acc 200/209)
+[2026-09-24 14:52:12] página 5/5: +9 (acc 209/209)
+[2026-09-24 14:52:12] linhas coletadas: 209
+[2026-09-24 14:52:12] produtos na coleta (deve ser só "85 VILLAGIO SIENA"): {"85 VILLAGIO SIENA": 209}
+[2026-09-24 14:52:12] fichas 40/209
+[2026-09-24 14:52:18] fichas 80/209
+[2026-09-24 14:52:25] fichas 120/209
+[2026-09-24 14:52:31] fichas 160/209
+[2026-09-24 14:52:38] fichas 200/209
+[2026-09-24 14:52:44] fichas 209/209
+[2026-09-24 14:52:46] fichas buscadas: 209
+[2026-09-24 14:52:46] buscando contato de 5 corretor(es) novo(s)
+[2026-09-24 14:53:07] aviso: 4 corretor(es) não encontrados na listagem de usuários: ['CLAUDEIR COELHO ROCHA', 'João Paulo Mamede Rocha', 'Leonardo Augusto Alves Rodrigues', 'Thaylize Vargas Martins']
+[2026-09-24 14:53:07] contatos.tsv atualizado com 1 novo(s)
+[2026-09-24 14:53:08] tags distintas encontradas (14): ['AD', 'Até 24x', 'Até 48x', 'BOLETO NEXO', 'CONTRATO DIGITAL', 'CONTRATO FÍSICO', 'Cliente BrDU', 'Em lançamento de venda', 'FALTA PIX', 'Lead Quente', 'PIX', 'Plano longo', 'SECNEXO', 'Venda à vista']
+[2026-09-24 14:53:08] gravado C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\dados\rows_vendas.json — 209 cadastro(s)
+[2026-09-24 14:53:08] ==== fim — 101.4s ====

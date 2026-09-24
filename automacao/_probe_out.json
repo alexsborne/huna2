@@ -1,0 +1,418 @@
+{
+  "dump": {
+    "comps": [
+      "leads-table",
+      "notifications"
+    ],
+    "nSelects": 14,
+    "selects": [
+      {
+        "name": "tableFiltersForm.arquivado.value",
+        "wire": "tableDeferredFilters.arquivado.value",
+        "n": 3,
+        "opts": [
+          "|Arquivado?",
+          "0|Não",
+          "1|Sim"
+        ]
+      },
+      {
+        "name": "tableFiltersForm.semresponsavel.value",
+        "wire": "tableDeferredFilters.semresponsavel.value",
+        "n": 2,
+        "opts": [
+          "|Sem Responsável?",
+          "1|Sim"
+        ]
+      },
+      {
+        "name": "",
+        "wire": "tableRecordsPerPage",
+        "n": 4,
+        "opts": [
+          "5|5",
+          "10|10",
+          "25|25",
+          "50|50"
+        ]
+      },
+      {
+        "name": "",
+        "wire": "tableRecordsPerPage",
+        "n": 4,
+        "opts": [
+          "5|5",
+          "10|10",
+          "25|25",
+          "50|50"
+        ]
+      },
+      {
+        "name": "uf",
+        "wire": "",
+        "n": 28,
+        "opts": [
+          "AA|( Selecione um Estado )",
+          "AC|AC",
+          "AL|AL",
+          "AM|AM",
+          "AP|AP",
+          "BA|BA",
+          "CE|CE",
+          "DF|DF",
+          "ES|ES",
+          "GO|GO",
+          "MA|MA",
+          "MG|MG",
+          "MS|MS",
+          "MT|MT",
+          "PA|PA",
+          "PB|PB",
+          "PE|PE",
+          "PI|PI",
+          "PR|PR",
+          "RJ|RJ",
+          "RN|RN",
+          "RO|RO",
+          "RR|RR",
+          "RS|RS",
+          "SC|SC"
+        ]
+      },
+      {
+        "name": "cidade",
+        "wire": "",
+        "n": 0,
+        "opts": []
+      },
+      {
+        "name": "produto",
+        "wire": "",
+        "n": 24,
+        "opts": [
+          "0|( Selecione um Produto )",
+          "333|Villagio Veneto",
+          "352|Pasta de Clientes - SIENA",
+          "357|FAZENDA VILLAGIO TEXAS",
+          "404|RESERVA DO PARQUE 2",
+          "410|PARQUE DO CERRADO",
+          "411|VERONA 2",
+          "413|PARQUE DO BOSQUE",
+          "414|PARQUE DA MATA",
+          "415|RESERVA DO PARQUE",
+          "419|FUGUEIRAS DO PARQUE",
+          "420|JARDIM DO PARQUE",
+          "421|ALTA VISTA PARQUE",
+          "422|JARDIM DO PARQUE 2",
+          "423|VILLAGIO TOSCANA",
+          "424|VILLAGIO AZZURE",
+          "425|PARQUE DAS BRISAS",
+          "426|PARQUE DOS VENTOS",
+          "427|PARQUE DAS AGUAS",
+          "428|VILLAGIO SIENA",
+          "430|VERONA",
+          "432|MIRANTE DO PARQUE",
+          "434|Verona 2",
+          "435|Verona Orlando"
+        ]
+      },
+      {
+        "name": "origem",
+        "wire": "",
+        "n": 30,
+        "opts": [
+          "0|( Selecione uma Origem )",
+          "1|Google Ads",
+          "2|Facebook Ads",
+          "3|Cadastro Manual",
+          "4|Website Orgânico",
+          "5|Importação Planilhas",
+          "6|Portal Zap Imóveis",
+          "7|Portal Viva Real",
+          "8|Auto-Venda Imobmeet",
+          "9|Portal Casafy",
+          "10|Portal Apto",
+          "11|Portal Olx",
+          "12|Formulário Imobmeet",
+          "13|Pasta Digital",
+          "14|Zendesk",
+          "125|WhatsApp",
+          "166|INDICAÇÃO (CLIENTE, PARCEIRO, COLABORADOR)",
+          "167|PANFLETAGEM",
+          "168|TV",
+          "169|RADIO",
+          "170|MÍDIA EXTERIOR (OUTDOOR/FAIXAS/PLACAS FÍSICAS)",
+          "171|JORNAL IMPRESSO",
+          "172|TRÁFEGO PAGO( GOOGLE/ META ADS)",
+          "173|PAP - PORTA A PORTA",
+          "174|EVENTOS / AÇÕES PROMOCIONAIS"
+        ]
+      },
+      {
+        "name": "canal",
+        "wire": "",
+        "n": 2,
+        "opts": [
+          "0|( Selecione um Canal )",
+          "37|Elexia"
+        ]
+      },
+      {
+        "name": "findfunil",
+        "wire": "",
+        "n": 3,
+        "opts": [
+          "0|( Selecione um Funil )",
+          "126|Funil de Venda",
+          "128|Funil de Pasta"
+        ]
+      },
+      {
+        "name": "findetapa",
+        "wire": "",
+        "n": 1,
+        "opts": [
+          "0|( Selecione uma Etapa )"
+        ]
+      },
+      {
+        "name": "equipe",
+        "wire": "",
+        "n": 561,
+        "opts": [
+          "0|( Selecione uma Equipe )",
+          "1948|...",
+          "1269|1 - Criar Coordenadoria",
+          "1281|108 - FV MKT",
+          "1957|41 BUSINESS - RICKYE ROBERT",
+          "1947|A&S IMOVEIS - MARCOS ANTÔNIO DE SOUZA FARIAS",
+          "1829|AC IMOVEIS - ADRIELE COSTA DOS SANTOS",
+          "1962|ADAO ACTION - ADRIANO BRASIL",
+          "1607|ADAO ACTION - ANA CARLA TEODOSIA",
+          "1594|ADAO ACTION - BRUNO DARES BARBOSA",
+          "1605|ADAO ACTION - FENELON ZAVA",
+          "1604|ADAO ACTION - GIOVANA ZAVA",
+          "1606|ADAO ACTION - JOAO GABRIEL ZAVA VARJAO FAGUNDES",
+          "1461|ADAO ACTION - JONNY RAMON O S GOMES",
+          "1608|ADAO ACTION - LEONARDO DAVID COSTA NOGUEIRA",
+          "1609|ADAO ACTION - LUIS FERNANDO ELIAS DAVID",
+          "1603|ADAO ACTION - PAULLO HENRIQUE SIQUEIRA",
+          "1714|ADAO MAIS -  EDESIO TEIXEIRA",
+          "1715|ADAO MAIS - BLENDA GARCIA MARIANO",
+          "1464|ADAO MAIS - CAROLLINA MENDONCA MAMEDE",
+          "1718|ADAO MAIS - EMMANUEL FEITOSA MEDEIROS PEREIRA",
+          "1719|ADAO MAIS - GABRIELA RESENDE PARREIRA E FAUSTINO",
+          "1462|ADAO MAIS - GUILHERME COSTA CABRAL",
+          "1717|ADAO MAIS - GUILHERME FERREIRA DA SILVA LIMA",
+          "1790|ADAO MAIS - GUILHERME LIMA"
+        ]
+      },
+      {
+        "name": "responsavel",
+        "wire": "",
+        "n": 1,
+        "opts": [
+          "0|( Selecione um Responsável\n                                        )"
+        ]
+      },
+      {
+        "name": "tags",
+        "wire": "",
+        "n": 30,
+        "opts": [
+          "861|Venda à vista",
+          "862|Até 24x",
+          "863|Até 48x",
+          "864|Plano longo",
+          "866|Contrato - Emitido",
+          "867|Contrato - Enviado",
+          "960|AD",
+          "961|UR",
+          "962|LO",
+          "963|HU",
+          "964|MY",
+          "965|AE",
+          "1032|PIX",
+          "1034|FALTA PIX",
+          "1040|PROPOSTA",
+          "1041|CONTRATO DIGITAL",
+          "1055|Visita Agendada",
+          "1056|Lead Quente",
+          "1057|Lead Frio",
+          "1059|Em lançamento de venda",
+          "1060|Ofertão My Broker 16-06",
+          "1067|CONTRATO FÍSICO",
+          "1071|CONTRATO EM CORREÇÃO",
+          "1072|CONTRATO REENVIADO",
+          "1096|MODELO MISTO"
+        ]
+      }
+    ],
+    "uniqIds": [
+      "0022",
+      "198",
+      "067"
+    ],
+    "names": [
+      "Funil de Venda",
+      "Funil de Pasta"
+    ],
+    "gestao": [
+      "126",
+      "128"
+    ]
+  },
+  "cand": [
+    {
+      "tag": "DIV",
+      "t": "Dashboard\n                    \n                \n            ",
+      "cls": "flex h-screen"
+    },
+    {
+      "tag": "DIV",
+      "t": "Alexandre Lopes\n                                TAJ EMPREEND",
+      "cls": "flex-1 overflow-y-auto pb-mobile"
+    },
+    {
+      "tag": "DIV",
+      "t": ".fi-ta-filters .fi-fo-component-ctn {\n            /* backgro",
+      "cls": "p-6"
+    },
+    {
+      "tag": "DIV",
+      "t": ".fi-ta-filters .fi-fo-component-ctn {\n            /* backgro",
+      "cls": ""
+    },
+    {
+      "tag": "DIV",
+      "t": "Abrir ações                            \n            \n       ",
+      "cls": "fi-ta"
+    },
+    {
+      "tag": "DIV",
+      "t": "Abrir ações                            \n            \n       ",
+      "cls": "fi-ta-ctn fi-ta-ctn-with-footer fi-ta-ctn-with-header"
+    }
+  ],
+  "venda": {
+    "nTr": 50,
+    "pag": "",
+    "pagHtml": "Exibindo 1 a 50 de 3,048 resultados\npor página\n5\n10\n25\n50\n1\n2\n3\n4\n...\n60\n61",
+    "funilSamples": [
+      "Funil de Venda|Pré Cadastro",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte",
+      "Funil de Venda|Descarte"
+    ],
+    "nFunilVals": 3
+  },
+  "/leads/gestao/126": {
+    "url": "https://crm.imobmeet.com.br/leads/gestao/126",
+    "title": "Imobmeet | TAJ EMPREENDIMENTOS E PARTICIPACOES S/A",
+    "nLinks": 7,
+    "links": [
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "https://crm.imobmeet.com.br/leads/gestao/126",
+        "t": "Remover Filtros"
+      }
+    ],
+    "ids": [
+      "126",
+      "128"
+    ]
+  },
+  "/leads/gestao/128": {
+    "url": "https://crm.imobmeet.com.br/leads/gestao/128",
+    "title": "Imobmeet | TAJ EMPREENDIMENTOS E PARTICIPACOES S/A",
+    "nLinks": 7,
+    "links": [
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "https://crm.imobmeet.com.br/leads/gestao/128",
+        "t": "Remover Filtros"
+      }
+    ],
+    "ids": [
+      "126",
+      "128"
+    ]
+  },
+  "/funils": {
+    "url": "https://crm.imobmeet.com.br/funils",
+    "title": "Imobmeet | TAJ EMPREENDIMENTOS E PARTICIPACOES S/A",
+    "nLinks": 4,
+    "links": [
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      },
+      {
+        "href": "/leads/gestao/126",
+        "t": "Funil de Venda"
+      },
+      {
+        "href": "/leads/gestao/128",
+        "t": "Funil de Pasta"
+      }
+    ],
+    "ids": [
+      "126",
+      "128"
+    ]
+  }
+}

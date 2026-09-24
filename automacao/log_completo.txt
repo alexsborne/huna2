@@ -1,0 +1,28 @@
+[2026-09-11 03:10:58] ==== início COMPLETO ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 03:11:13] login ok
+[2026-09-11 03:11:13] listando Funil de Pasta (128)...
+[2026-09-11 03:11:31] funil 128 página 1: 50/231
+[2026-09-11 03:11:35] funil 128 página 2: 100/231
+[2026-09-11 03:11:38] funil 128 página 3: 150/231
+[2026-09-11 03:11:42] funil 128 página 4: 200/231
+[2026-09-11 03:11:45] funil 128 página 5: 231/231
+[2026-09-11 03:11:45] Funil de Pasta: 231 linha(s)
+[2026-09-11 03:11:45] listando Funil de Venda (126)...
+[2026-09-11 03:12:04] funil 126 página 1: 50/3
+[2026-09-11 03:12:04] Funil de Venda: 50 linha(s)
+[2026-09-11 03:12:04] ERRO — abortando SEM publicar: Funil de Venda veio com só 50 cadastros — extração incompleta (esperado ~3000).
+[2026-09-11 03:12:36] ==== início COMPLETO ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 03:12:48] login ok
+[2026-09-11 03:12:48] listando Funil de Pasta (128)...
+[2026-09-11 03:13:06] funil 128 página 1: 50/231
+[2026-09-11 03:13:10] funil 128 página 2: 100/231
+[2026-09-11 03:13:14] funil 128 página 3: 150/231
+[2026-09-11 03:13:17] funil 128 página 4: 150/231
+[2026-09-11 03:13:17] Funil de Pasta: 150 linha(s)
+[2026-09-11 03:13:17] listando Funil de Venda (126)...
+[2026-09-11 03:13:48] funil 126 página 1: 50/3048
+[2026-09-11 03:13:52] funil 126 página 2: 100/3048
+[2026-09-11 03:13:55] funil 126 página 3: 150/3048
+[2026-09-11 03:13:59] funil 126 página 4: 150/3048
+[2026-09-11 03:13:59] Funil de Venda: 150 linha(s)
+[2026-09-11 03:13:59] ERRO — abortando SEM publicar: Funil de Venda veio com só 150 cadastros — extração incompleta (esperado ~3000).

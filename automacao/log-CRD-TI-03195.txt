@@ -1,0 +1,524 @@
+[2026-09-04 15:23:02] ==== início ==== (DRY_RUN=False, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-04 15:23:09] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-04 15:25:22] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-04 15:25:22] login ok
+[2026-09-04 15:26:38] extração de leads: 182 linha(s) bruta(s)
+[2026-09-04 15:26:38] buscando contato de 1 corretor(es) novo(s): ['THAUANY DA SILVA SOUSA']
+[2026-09-04 15:26:48] dados/rows.json gravado: 182 cadastros
+[2026-09-04 15:26:50] rebuild2.py: ok 04/09/2026 15:26
+[2026-09-04 15:26:50] index.html regenerado (com metas noindex).
+[2026-09-04 15:26:58] publicado em alexsborne/huna.
+[2026-09-04 15:26:58] resumo: 182 cadastros (4 novo(s), 0 sumiu/sumiram) · 202 marcações de tag · etapas: Cadastro Cliente=69, Desistente=3, Pasta Aprovada com Pix=31, Pasta Validada pendente de Pix=37, Pasta com Pendência=39, Pasta em Anállise=3
+[2026-09-04 15:26:58] ==== fim (sucesso, publicado) — 236.3s ====
+[2026-09-05 10:43:01] ==== início ==== (DRY_RUN=False, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-05 10:43:11] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-05 10:48:13] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 550, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 503, in main
+    manual_login(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 256, in manual_login
+    raise RuntimeError('tempo esgotado esperando login manual (mais de {}s).'.format(timeout_s))
+RuntimeError: tempo esgotado esperando login manual (mais de 300s).
+
+[2026-09-05 10:48:54] ==== início ==== (DRY_RUN=False, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-05 10:49:00] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-05 10:49:43] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-05 10:49:43] login ok
+[2026-09-05 10:50:51] extração de leads: 184 linha(s) bruta(s)
+[2026-09-05 10:50:52] dados/rows.json gravado: 184 cadastros
+[2026-09-05 10:50:53] rebuild2.py: ok 05/09/2026 10:50
+[2026-09-05 10:50:54] index.html regenerado (com metas noindex).
+[2026-09-05 10:51:03] publicado em alexsborne/huna.
+[2026-09-05 10:51:03] resumo: 184 cadastros (2 novo(s), 0 sumiu/sumiram) · 206 marcações de tag · etapas: Cadastro Cliente=68, Desistente=4, Pasta Aprovada com Pix=32, Pasta Validada pendente de Pix=37, Pasta com Pendência=35, Pasta em Anállise=8
+[2026-09-05 10:51:03] ==== fim (sucesso, publicado) — 128.4s ====
+[2026-09-05 22:40:29] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-05 22:40:36] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-05 22:41:04] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 550, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 503, in main
+    manual_login(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 248, in manual_login
+    page.wait_for_timeout(2000)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 12696, in wait_for_timeout
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_timeout(timeout=to_milliseconds(timeout))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py", line 1142, in wait_for_timeout
+    await self._main_frame.wait_for_timeout(timeout)
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 924, in wait_for_timeout
+    await self._channel.send("waitForTimeout", None, {"waitTimeout": timeout})
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+
+[2026-09-05 22:41:39] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-05 22:41:44] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-05 22:42:40] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-05 22:42:40] login ok
+[2026-09-05 22:43:54] extração de leads: 201 linha(s) bruta(s)
+[2026-09-05 22:43:54] buscando contato de 3 corretor(es) novo(s): ['Gabriel Nogueira Rocha', 'Luidy Vitorino Xavier', 'Raphaela Pacheco Alexandre linhares']
+[2026-09-05 22:44:11] dados/rows.json gravado: 201 cadastros
+[2026-09-05 22:44:12] rebuild2.py: ok 05/09/2026 22:44
+[2026-09-05 22:44:13] index.html regenerado (com metas noindex).
+[2026-09-05 22:44:13] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-05 22:44:13] resumo: 201 cadastros (18 novo(s), 1 sumiu/sumiram) · 211 marcações de tag · etapas: Cadastro Cliente=82, Desistente=4, Pasta Aprovada com Pix=32, Pasta Validada pendente de Pix=37, Pasta com Pendência=33, Pasta em Anállise=13
+[2026-09-05 22:44:13] ==== fim (sucesso, NÃO publicado) — 153.8s ====
+[2026-09-06 11:40:04] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-06 11:40:13] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-06 11:40:53] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-06 11:40:53] login ok
+[2026-09-06 11:42:10] extração de leads: 206 linha(s) bruta(s)
+[2026-09-06 11:42:10] buscando contato de 1 corretor(es) novo(s): ['Hetyenny Holanda Gomes']
+[2026-09-06 11:42:21] dados/rows.json gravado: 206 cadastros
+[2026-09-06 11:42:22] rebuild2.py: ok 06/09/2026 11:42
+[2026-09-06 11:42:22] index.html regenerado (com metas noindex).
+[2026-09-06 11:42:22] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-06 11:42:22] resumo: 206 cadastros (5 novo(s), 0 sumiu/sumiram) · 215 marcações de tag · etapas: Cadastro Cliente=85, Desistente=4, Pasta Aprovada com Pix=32, Pasta Validada pendente de Pix=37, Pasta com Pendência=32, Pasta em Anállise=16
+[2026-09-06 11:42:22] ==== fim (sucesso, NÃO publicado) — 137.9s ====
+[2026-09-07 11:26:31] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-07 11:26:39] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-07 11:27:11] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-07 11:27:11] login ok
+[2026-09-07 11:28:30] extração de leads: 210 linha(s) bruta(s)
+[2026-09-07 11:28:30] buscando contato de 1 corretor(es) novo(s): ['Caio César Oliveira Angelin']
+[2026-09-07 11:28:39] dados/rows.json gravado: 210 cadastros
+[2026-09-07 11:28:40] rebuild2.py: ok 07/09/2026 11:28
+[2026-09-07 11:28:41] index.html regenerado (com metas noindex).
+[2026-09-07 11:28:41] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-07 11:28:41] resumo: 210 cadastros (6 novo(s), 2 sumiu/sumiram) · 222 marcações de tag · etapas: Cadastro Cliente=84, Desistente=4, Pasta Aprovada com Pix=34, Pasta Validada pendente de Pix=35, Pasta com Pendência=31, Pasta em Anállise=22
+[2026-09-07 11:28:41] ==== fim (sucesso, NÃO publicado) — 129.7s ====
+[2026-09-08 08:16:29] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-08 08:16:34] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-08 08:21:36] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 550, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 503, in main
+    manual_login(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 256, in manual_login
+    raise RuntimeError('tempo esgotado esperando login manual (mais de {}s).'.format(timeout_s))
+RuntimeError: tempo esgotado esperando login manual (mais de 300s).
+
+[2026-09-08 08:21:48] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-08 08:21:52] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-08 08:22:32] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-08 08:22:32] login ok
+[2026-09-08 08:23:51] extração de leads: 213 linha(s) bruta(s)
+[2026-09-08 08:23:51] buscando contato de 2 corretor(es) novo(s): ['Layza Cristina Teixeira', 'Priscila Santos Carvalho']
+[2026-09-08 08:24:03] dados/rows.json gravado: 213 cadastros
+[2026-09-08 08:24:04] rebuild2.py: ok 08/09/2026 08:24
+[2026-09-08 08:24:05] index.html regenerado (com metas noindex).
+[2026-09-08 08:24:05] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-08 08:24:05] resumo: 213 cadastros (3 novo(s), 0 sumiu/sumiram) · 227 marcações de tag · etapas: Cadastro Cliente=86, Desistente=5, Pasta Aprovada com Pix=34, Pasta Validada pendente de Pix=35, Pasta com Pendência=31, Pasta em Anállise=22
+[2026-09-08 08:24:05] ==== fim (sucesso, NÃO publicado) — 137.1s ====
+[2026-09-08 16:52:11] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-08 16:52:19] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-08 16:53:13] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-08 16:53:13] login ok
+[2026-09-08 16:54:34] extração de leads: 218 linha(s) bruta(s)
+[2026-09-08 16:54:34] buscando contato de 10 corretor(es) novo(s): ['Hortência Moreira dos Santos', 'JULIO CARLOS ALVES DUTRA', 'KAROLINE CARDOSO RUFINO', 'Kenia Cristina Cassiano', 'Márcio José Alves', 'RICARDO FERREIRA BEZERRA DAS GRAÇAS', 'Rejane Vieira', 'WEDER RAIMUNDO DOS SANTOS', 'YURI YOSHIDA', 'antonio marcos bolivar']
+[2026-09-08 16:55:15] dados/rows.json gravado: 218 cadastros
+[2026-09-08 16:55:16] rebuild2.py: ok 08/09/2026 16:55
+[2026-09-08 16:55:16] index.html regenerado (com metas noindex).
+[2026-09-08 16:55:16] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-08 16:55:16] resumo: 218 cadastros (12 novo(s), 7 sumiu/sumiram) · 243 marcações de tag · etapas: Cadastro Cliente=80, Desistente=5, Pasta Aprovada com Pix=46, Pasta Validada pendente de Pix=35, Pasta com Pendência=27, Pasta em Anállise=25
+[2026-09-08 16:55:16] ==== fim (sucesso, NÃO publicado) — 184.9s ====
+[2026-09-09 11:57:05] ==== início ==== (DRY_RUN=True, LOGIN_MODE=manual, HEADLESS=False)
+[2026-09-09 11:57:14] aguardando login manual na janela do Chrome (até 300s)...
+[2026-09-09 11:57:33] login detectado — URL mudou para https://crm.imobmeet.com.br/dashboard
+[2026-09-09 11:57:33] login ok
+[2026-09-09 11:59:09] extração de leads: 227 linha(s) bruta(s)
+[2026-09-09 11:59:09] buscando contato de 2 corretor(es) novo(s): ['HELEN CRISTINE SANTOS COSTA', 'Marcus Daniel Brilhante Alencar']
+[2026-09-09 11:59:22] dados/rows.json gravado: 227 cadastros
+[2026-09-09 11:59:23] rebuild2.py: ok 09/09/2026 11:59
+[2026-09-09 11:59:23] index.html regenerado (com metas noindex).
+[2026-09-09 11:59:23] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-09 11:59:23] resumo: 227 cadastros (9 novo(s), 0 sumiu/sumiram) · 273 marcações de tag · etapas: Cadastro Cliente=75, Desistente=5, Pasta Aprovada com Pix=51, Pasta Validada pendente de Pix=36, Pasta com Pendência=28, Pasta em Anállise=32
+[2026-09-09 11:59:23] ==== fim (sucesso, NÃO publicado) — 138.3s ====
+[2026-09-09 16:18:23] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=False)
+[2026-09-09 16:18:54] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 555, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 510, in main
+    login(page, user, pwd, login_url)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 231, in login
+    pass_field.fill(pwd, timeout=15000)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 18242, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_locator.py", line 219, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 15000ms exceeded.
+Call log:
+  - waiting for get_by_label(re.compile(r"senha|password", re.IGNORECASE)).first
+
+
+[2026-09-09 16:23:38] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=False)
+[2026-09-09 16:24:00] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 558, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 513, in main
+    login(page, user, pwd, login_url)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 231, in login
+    pass_field.fill(pwd, timeout=15000)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 18242, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_locator.py", line 219, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 15000ms exceeded.
+Call log:
+  - waiting for get_by_label(re.compile(r"senha|password", re.IGNORECASE)).first
+
+
+[2026-09-09 16:26:05] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=False)
+[2026-09-09 16:26:18] login ok
+[2026-09-09 16:27:49] extração de leads: 232 linha(s) bruta(s)
+[2026-09-09 16:27:49] buscando contato de 1 corretor(es) novo(s): ['Robson Caetano Ataídes Júnior']
+[2026-09-09 16:27:59] dados/rows.json gravado: 232 cadastros
+[2026-09-09 16:28:00] rebuild2.py: ok 09/09/2026 16:27
+[2026-09-09 16:28:01] index.html regenerado (com metas noindex).
+[2026-09-09 16:28:01] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-09 16:28:01] resumo: 232 cadastros (5 novo(s), 0 sumiu/sumiram) · 298 marcações de tag · etapas: Cadastro Cliente=75, Desistente=5, Pasta Aprovada com Pix=61, Pasta Validada pendente de Pix=48, Pasta com Pendência=35, Pasta em Anállise=8
+[2026-09-09 16:28:01] ==== fim (sucesso, NÃO publicado) — 116.0s ====
+[2026-09-09 17:05:33] ==== início ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-09 17:07:05] login ok
+[2026-09-09 17:07:14] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 563, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 521, in main
+    raw = extract_leads(page)
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 270, in extract_leads
+    page.goto(IMOBMEET_BASE + '/leads/list', wait_until='domcontentloaded')
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 9875, in goto
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.goto(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py", line 560, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 156, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_ABORTED at https://crm.imobmeet.com.br/leads/list
+Call log:
+  - navigating to "https://crm.imobmeet.com.br/leads/list", waiting until "domcontentloaded"
+
+
+[2026-09-09 17:07:58] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-09 17:08:11] login ok
+[2026-09-09 17:09:43] extração de leads: 234 linha(s) bruta(s)
+[2026-09-09 17:09:43] buscando contato de 1 corretor(es) novo(s): ['Marcelina R. Ramos Porto']
+[2026-09-09 17:09:57] dados/rows.json gravado: 234 cadastros
+[2026-09-09 17:09:57] rebuild2.py: ok 09/09/2026 17:09
+[2026-09-09 17:09:58] index.html regenerado (com metas noindex).
+[2026-09-09 17:09:58] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-09 17:09:58] resumo: 234 cadastros (2 novo(s), 0 sumiu/sumiram) · 299 marcações de tag · etapas: Cadastro Cliente=77, Desistente=5, Pasta Aprovada com Pix=61, Pasta Validada pendente de Pix=48, Pasta com Pendência=37, Pasta em Anállise=6
+[2026-09-09 17:09:58] ==== fim (sucesso, NÃO publicado) — 119.4s ====
+[2026-09-10 12:02:00] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-10 12:02:20] login ok
+[2026-09-10 12:03:58] extração de leads: 236 linha(s) bruta(s)
+[2026-09-10 12:03:58] buscando contato de 1 corretor(es) novo(s): ['João Paulo Mamede Rocha']
+[2026-09-10 12:04:06] aviso: 1 corretor(es) não encontrados na listagem de usuários: ['João Paulo Mamede Rocha']
+[2026-09-10 12:04:07] ERRO — abortando SEM publicar: 1 cadastro(s) sem telefone/e-mail do corretor mesmo após buscar em contatos.tsv/extração 2: ['107498']
+[2026-09-10 12:16:18] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-10 12:16:30] login ok
+[2026-09-10 12:17:53] extração de leads: 236 linha(s) bruta(s)
+[2026-09-10 12:17:53] buscando contato de 1 corretor(es) novo(s): ['João Paulo Mamede Rocha']
+[2026-09-10 12:18:00] aviso: 1 corretor(es) não encontrados na listagem de usuários: ['João Paulo Mamede Rocha']
+[2026-09-10 12:18:00] aviso: 1 cadastro(s) com corretor sem telefone/e-mail localizado no Imobmeet: ['107498']
+[2026-09-10 12:18:00] dados/rows.json gravado: 236 cadastros
+[2026-09-10 12:18:01] rebuild2.py: ok 10/09/2026 12:18
+[2026-09-10 12:18:01] index.html regenerado (com metas noindex).
+[2026-09-10 12:18:01] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-10 12:18:01] resumo: 236 cadastros (2 novo(s), 0 sumiu/sumiram) · 337 marcações de tag · etapas: Cadastro Cliente=41, Desistente=5, Pasta Aprovada com Pix=67, Pasta Validada pendente de Pix=53, Pasta com Pendência=69, Pasta em Anállise=1
+[2026-09-10 12:18:01] ==== fim (sucesso, NÃO publicado) — 103.5s ====
+[2026-09-11 01:15:26] ==== início ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 01:15:30] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 568, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 505, in main
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+[2026-09-11 01:16:00] ==== início ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 01:16:24] login ok
+[2026-09-11 01:17:47] extração de leads: 231 linha(s) bruta(s)
+[2026-09-11 01:17:47] buscando contato de 4 corretor(es) novo(s): ['César Fioramonte Silva', 'João Paulo Mamede Rocha', 'LEONARDO MARTINS CAMILO', 'Wellington Souza santos']
+[2026-09-11 01:18:07] aviso: 1 corretor(es) não encontrados na listagem de usuários: ['João Paulo Mamede Rocha']
+[2026-09-11 01:18:07] aviso: 1 cadastro(s) com corretor sem telefone/e-mail localizado no Imobmeet: ['107498']
+[2026-09-11 01:18:07] dados/rows.json gravado: 231 cadastros
+[2026-09-11 01:18:08] rebuild2.py: ok 11/09/2026 01:18
+[2026-09-11 01:18:08] index.html regenerado (com metas noindex).
+[2026-09-11 01:18:17] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 568, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 560, in main
+    publicou = git_publish()
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 474, in git_publish
+    run(['git', '-C', str(CLONE_DIR), 'commit', '-m', msg])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 97, in run
+    raise RuntimeError('comando falhou ({}): {}\nstdout: {}\nstderr: {}'.format(
+        r.returncode, ' '.join(cmd), r.stdout, r.stderr))
+RuntimeError: comando falhou (128): git -C C:\Users\alexs\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\_publish_clone commit -m Atualização automática — 11/09/2026 01:18
+stdout: 
+stderr: Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'alexs@cientista.(none)')
+
+
+[2026-09-11 15:29:55] publicado em alexsborne/huna (index.html).
+[2026-09-11 16:16:23] publicado em alexsborne/huna (index.html).
+[2026-09-11 17:30:09] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 17:30:48] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 795, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 740, in main
+    login(page, user, pwd, login_url)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 238, in login
+    page.wait_for_load_state('networkidle', timeout=30000)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 9980, in wait_for_load_state
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_load_state(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            state=state, timeout=to_milliseconds(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py", line 580, in wait_for_load_state
+    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 298, in wait_for_load_state
+    return await self._wait_for_load_state_impl(state, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 326, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"commit" event fired
+============================================================
+
+[2026-09-11 17:30:54] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 17:31:06] login ok
+[2026-09-11 17:32:27] extração de leads: 240 linha(s) bruta(s)
+[2026-09-11 17:32:27] buscando contato de 4 corretor(es) novo(s): ['GERSON ARAUJO PEREIRA', 'Gilberty Reis de Melo', 'João Paulo Mamede Rocha', 'PAULO ROBERTO']
+[2026-09-11 17:32:45] aviso: 1 corretor(es) não encontrados na listagem de usuários: ['João Paulo Mamede Rocha']
+[2026-09-11 17:32:46] aviso: 1 cadastro(s) com corretor sem telefone/e-mail localizado no Imobmeet: ['107498']
+[2026-09-11 17:32:46] ERRO — abortando SEM publicar: tag(s) nova(s) fora de dados/catmap.json — decidir a categoria manualmente antes de publicar (regra do projeto: nunca deixar passar sem olhar): ['SECNEXO']
+[2026-09-11 17:38:11] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 17:38:49] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 795, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 740, in main
+    login(page, user, pwd, login_url)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 238, in login
+    page.wait_for_load_state('networkidle', timeout=30000)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 9980, in wait_for_load_state
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_load_state(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            state=state, timeout=to_milliseconds(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py", line 580, in wait_for_load_state
+    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 298, in wait_for_load_state
+    return await self._wait_for_load_state_impl(state, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 326, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"load" event fired
+"commit" event fired
+============================================================
+
+[2026-09-11 17:38:58] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 17:39:10] login ok
+[2026-09-11 17:40:28] extração de leads: 240 linha(s) bruta(s)
+[2026-09-11 17:40:28] buscando contato de 1 corretor(es) novo(s): ['João Paulo Mamede Rocha']
+[2026-09-11 17:40:35] aviso: 1 corretor(es) não encontrados na listagem de usuários: ['João Paulo Mamede Rocha']
+[2026-09-11 17:40:36] aviso: 1 cadastro(s) com corretor sem telefone/e-mail localizado no Imobmeet: ['107498']
+[2026-09-11 17:40:36] dados/rows.json gravado: 240 cadastros
+[2026-09-11 17:40:37] rebuild2.py: ok pasta 11/09/2026 17:40
+[2026-09-11 17:40:38] index.html regenerado (com metas noindex).
+[2026-09-11 17:40:38] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-11 17:40:38] resumo: 240 cadastros (9 novo(s), 0 sumiu/sumiram) · 460 marcações de tag · etapas: Cadastro Cliente=23, Desistente=7, Pasta Aprovada com Pix=74, Pasta Validada pendente de Pix=56, Pasta com Pendência=80
+[2026-09-11 17:40:38] ==== fim (sucesso, NÃO publicado) — 100.2s ====
+[2026-09-11 17:40:58] publicado em alexsborne/huna (index.html).
+[2026-09-11 17:59:03] ==== início ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-11 18:00:37] EXCEÇÃO NÃO TRATADA — abortando SEM publicar:
+Traceback (most recent call last):
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 795, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 740, in main
+    login(page, user, pwd, login_url)
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\automacao\atualizar.py", line 238, in login
+    page.wait_for_load_state('networkidle', timeout=30000)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\sync_api\_generated.py", line 9980, in wait_for_load_state
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for_load_state(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            state=state, timeout=to_milliseconds(timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        )
+        ^
+    )
+    ^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_page.py", line 580, in wait_for_load_state
+    return await self._main_frame.wait_for_load_state(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 298, in wait_for_load_state
+    return await self._wait_for_load_state_impl(state, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexandre.lopes\AppData\Local\Programs\Python\Python313\Lib\site-packages\playwright\_impl\_frame.py", line 326, in _wait_for_load_state_impl
+    await waiter.result()
+playwright._impl._errors.TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+"commit" event fired
+============================================================
+
+[2026-09-14 08:48:07] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-14 08:48:33] login ok

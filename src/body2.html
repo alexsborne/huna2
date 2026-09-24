@@ -1,0 +1,377 @@
+<div id="hdr">
+  <div class="hdr-in">
+    <div class="brand">
+      <div class="logo"><img src="data:image/png;base64,__LOGO__" alt="Nexo Gestão Imobiliária"></div>
+      <div class="stamp" title="Data e hora em que esta página foi gerada">
+        <span class="lb">Atualizado em</span>
+        <span class="dt">__BUILD__</span>
+      </div>
+    </div>
+    <div class="hd">
+      <h1>__H1__</h1>
+      <p>__SUB__</p>
+      <span class="badge">Extraído em __EXTRACAO__ &middot; <b id="bTot">151</b> cadastros &middot; <b id="bTags">8</b> tags em uso</span>
+    </div>
+    <div class="theme-switch"><label for="fTema" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Tema</label><select id="fTema"></select></div>
+  </div>
+  <nav id="tabs"><div class="tabs-in" id="tabsIn" role="tablist"></div></nav>
+  <div id="hchips"></div>
+</div>
+<div id="spacer"></div>
+
+<div class="wrap">
+  <div id="fbar">
+    <button type="button" class="btn sec" id="fbarToggle" aria-expanded="false" style="width:100%;justify-content:center;margin-bottom:11px">Filtros</button>
+    <div class="filters">
+      <div class="f" id="wrapFunil"><label id="lFunil">Funil</label><div class="msel" id="fFunil" data-dim="funil" aria-labelledby="lFunil"></div></div>
+      <div class="f"><label id="lEtapa">Etapa</label><div class="msel" id="fEtapa" data-dim="etapa" aria-labelledby="lEtapa"></div></div>
+      <div class="f"><label id="lMarca">Imobiliária</label><div class="msel" id="fMarca" data-dim="tipo_imob" aria-labelledby="lMarca"></div></div>
+      <div class="f"><label id="lEquipe">Equipe</label><div class="msel" id="fEquipe" data-dim="equipe" aria-labelledby="lEquipe"></div></div>
+      <div class="f"><label id="lResp">Responsável</label><div class="msel" id="fResp" data-dim="responsavel" aria-labelledby="lResp"></div></div>
+      <div class="f"><label id="lOrigem">Origem</label><div class="msel" id="fOrigem" data-dim="origem" aria-labelledby="lOrigem"></div></div>
+      <div class="f"><label id="lPlano">Plano de pagamento</label><div class="msel" id="fPlano" data-dim="plano_pagamento" aria-labelledby="lPlano"></div></div>
+      <div class="f"><label id="lMes">Mês de cadastro</label><div class="msel" id="fMes" data-dim="mes" aria-labelledby="lMes"></div></div>
+      <div class="f"><label id="lTag">Tag</label><div class="msel" id="fTag" data-dim="tag" aria-labelledby="lTag"></div></div>
+      <div class="f"><label id="lCat">Categoria de tag</label><div class="msel" id="fCat" data-dim="categoria" aria-labelledby="lCat"></div></div>
+      <div class="f"><label for="fModo">Combinação de tags</label>
+        <select id="fModo"><option value="or">Qualquer uma (OU)</option><option value="and">Todas (E)</option><option value="none">Somente sem tag</option></select></div>
+      <div class="f"><label>&nbsp;</label><button class="btn sec" id="btnClear">Limpar tudo</button></div>
+    </div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <div id="empty" class="card">
+    <h3>Nenhum cadastro neste recorte</h3>
+    <p class="note" style="margin-bottom:14px">A combinação de filtros aplicada não retorna nenhum registro.</p>
+    <button class="btn" id="btnUndo">Desfazer último filtro</button>
+    <button class="btn sec" id="btnClear2">Limpar tudo</button>
+  </div>
+
+  <div id="panels">
+
+  <section class="panel" data-tab="visao">
+    <h2 class="sec">Indicadores</h2>
+    <p class="hint">Clique num indicador para filtrar o painel inteiro por aquele valor; Ctrl/Cmd+clique acumula.</p>
+    <div class="grid kpis" id="kpis"></div>
+    <h2 class="sec">Funil</h2>
+    <div class="grid two">
+      <div class="card"><p class="ch-t">Cadastros por etapa do funil</p><p class="ch-s">Volume em cada estágio da pasta.</p>
+        <p class="hint">Clique em uma barra para filtrar o painel inteiro por aquela etapa.</p>
+        <div class="cbox"><canvas id="cEtapa"></canvas></div><p class="note" id="nEtapa"></p>
+        <button class="btn sec xs chart-export" data-chart="cEtapa" data-title="Cadastros por etapa do funil">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Cadastros por mês e etapa atual</p><p class="ch-s">Em que estágio estão os cadastros de cada safra mensal.</p>
+        <div class="cbox"><canvas id="cMes"></canvas></div><p class="note" id="nMes"></p>
+        <button class="btn sec xs chart-export" data-chart="cMes" data-title="Cadastros por mês e etapa atual">Exportar Excel</button></div>
+    </div>
+    <h2 class="sec">Evolução no tempo</h2>
+    <div class="card"><p class="ch-t">Entradas no funil por dia</p><p class="ch-s">Data de entrada do cadastro no funil.</p>
+      <div class="cbox tall"><canvas id="cTempo"></canvas></div><p class="note" id="nTempo"></p>
+      <button class="btn sec xs chart-export" data-chart="cTempo" data-title="Entradas no funil por dia">Exportar Excel</button></div>
+  </section>
+
+  <section class="panel" data-tab="pagto">
+    <h2 class="sec">Marcadores financeiros</h2>
+    <div class="card"><p class="ch-t">Plano de pagamento</p><p class="ch-s">Quantos cadastros carregam cada marcador de forma/prazo de pagamento.</p>
+      <p class="hint">Clique numa barra para filtrar por essa tag.</p>
+      <div class="cbox"><canvas id="cPgto"></canvas></div>
+      <button class="btn sec xs chart-export" data-chart="cPgto" data-title="Plano de pagamento">Exportar Excel</button></div>
+    <h2 class="sec">Pagamento por etapa</h2>
+    <div class="card"><p class="ch-t">Tags financeiras dentro de cada etapa</p>
+      <p class="ch-s">Quantas marcações de cada tipo aparecem em cada estágio. Clique num segmento para filtrar por etapa e tag ao mesmo tempo.</p>
+      <div class="cbox xtall"><canvas id="cStack"></canvas></div><p class="note" id="nStack"></p>
+      <button class="btn sec xs chart-export" data-chart="cStack" data-title="Tags financeiras dentro de cada etapa">Exportar Excel</button></div>
+    <h2 class="sec">Situação do Pix</h2>
+    <div class="card"><p class="ch-t">Pix confirmado x pendente por etapa</p><p class="ch-s">Comparação direta entre as tags PIX e FALTA PIX ao longo do funil.</p>
+      <div class="cbox tall"><canvas id="cPix"></canvas></div><p class="note" id="nPix"></p>
+      <button class="btn sec xs chart-export" data-chart="cPix" data-title="Pix confirmado x pendente por etapa">Exportar Excel</button></div>
+  </section>
+
+  <section class="panel" data-tab="tags">
+    <h2 class="sec">Todas as tags em uso</h2>
+    <div class="grid two">
+      <div class="card"><p class="ch-t">Frequência de cada tag</p>
+        <p class="ch-s">Descoberta automaticamente a partir dos dados — qualquer tag nova aparece aqui e nos filtros.</p>
+        <p class="hint">Clique para filtrar; Ctrl/Cmd+clique acumula tags.</p>
+        <div class="cbox tall"><canvas id="cTags"></canvas></div><div class="legend" id="lgCat"></div></div>
+      <div class="card"><p class="ch-t">Tags por categoria</p><p class="ch-s">Agrupamento das marcações por natureza.</p>
+        <div class="cbox tall"><canvas id="cCat"></canvas></div><p class="note" id="nCat"></p></div>
+    </div>
+    <h2 class="sec">Mapa de calor</h2>
+    <div class="card"><p class="ch-t">Etapa × tag</p><p class="ch-s">Onde cada marcação se concentra ao longo do funil. Clique numa célula para filtrar por etapa e tag.</p>
+      <div class="tbar" data-table="tHeat" data-name="mapa_calor_etapa_x_tag" data-title="Mapa de calor — etapa × tag"></div>
+      <div class="tw"><table class="hm" id="tHeat"></table></div></div>
+    <h2 class="sec">Catálogo de tags</h2>
+    <div class="card">
+      <div class="tbar" data-table="tDim" data-name="catalogo_de_tags" data-title="Catálogo de tags"></div>
+      <div class="tw"><table id="tDim"></table></div>
+      <p class="note">Nenhuma tag é descartada: marcações fora das categorias conhecidas entram como <b>OUTROS</b> e continuam nos gráficos e filtros.</p></div>
+  </section>
+
+  <section class="panel" data-tab="times">
+    <h2 class="sec">Volume por time</h2>
+    <div class="grid three" style="align-items:start">
+      <div class="card"><p class="ch-t">Imobiliárias</p><p class="ch-s">Todas as lançadoras presentes no recorte, da maior para a menor.</p>
+        <p class="hint">Clique numa barra para ver os gerentes daquela imobiliária.</p>
+        <div class="cbox tall scroll" id="boxImob"><div class="cbox-inner" id="innerImob"><canvas id="cImob"></canvas></div></div><p class="note" id="nImob"></p>
+        <button class="btn sec xs chart-export" data-chart="cImob" data-title="Imobiliárias">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Gerentes</p><p class="ch-s">Todas as equipes/gerentes do recorte; restringe se uma imobiliária estiver selecionada acima.</p>
+        <p class="hint">Clique numa barra para ver os corretores daquele gerente.</p>
+        <div class="cbox tall scroll" id="boxGer"><div class="cbox-inner" id="innerGer"><canvas id="cGer"></canvas></div></div><p class="note" id="nGer"></p>
+        <button class="btn sec xs chart-export" data-chart="cGer" data-title="Gerentes">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Corretores</p><p class="ch-s">Todos os corretores do recorte; restringe se um gerente estiver selecionado acima.</p>
+        <div class="cbox tall scroll" id="boxCorr"><div class="cbox-inner" id="innerCorr"><canvas id="cCorr"></canvas></div></div><p class="note" id="nCorr"></p>
+        <button class="btn sec xs chart-export" data-chart="cCorr" data-title="Corretores">Exportar Excel</button></div>
+    </div>
+    <h2 class="sec">Origem dos cadastros</h2>
+    <div class="card"><p class="ch-t">Origem do cadastro</p><p class="ch-s">De onde vieram os cadastros da pasta.</p>
+      <div class="cbox tall"><canvas id="cOrigem"></canvas></div><p class="note" id="nOrigem"></p>
+      <button class="btn sec xs chart-export" data-chart="cOrigem" data-title="Origem do cadastro">Exportar Excel</button></div>
+  </section>
+
+  <section class="panel" data-tab="times2">
+    <h2 class="sec">Mapa da hierarquia</h2>
+    <p class="hint">Clique numa imobiliária para ver as equipes; continue clicando para descer até corretor e clientes. Clique de novo num nó selecionado para recolher.</p>
+    <div class="card">
+      <div class="mm-wrap" id="mmWrap">
+        <svg id="mmLines" class="mm-lines"></svg>
+        <div class="mm-cols" id="mmCols"></div>
+      </div>
+      <p class="note" id="nMM"></p>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="times3">
+    <h2 class="sec">Volume por hierarquia</h2>
+    <p class="hint">Imobiliária = 1ª palavra da equipe; Equipe = palavra(s) do meio; Gerente = nome depois do "-" (ex.: "ADÃO SOLO - ALESSANDRO" → Adão / Solo / Alessandro). Os 5 gráficos já vêm abertos com o recorte todo; clique numa barra para restringir os níveis à direita; clique de novo para recolher.</p>
+    <div class="grid three" style="align-items:start">
+      <div class="card"><p class="ch-t">Imobiliária</p><p class="ch-s">Todas as imobiliárias do recorte.</p>
+        <div class="cbox tall scroll" id="boxT3Imob"><div class="cbox-inner" id="innerT3Imob"><canvas id="t3Imob"></canvas></div></div><p class="note" id="nT3Imob"></p>
+        <button class="btn sec xs chart-export" data-chart="t3Imob" data-title="Imobiliária">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Equipe</p><p class="ch-s">Todas as equipes do recorte; restringe se uma imobiliária estiver selecionada acima.</p>
+        <div class="cbox tall scroll" id="boxT3Eq"><div class="cbox-inner" id="innerT3Eq"><canvas id="t3Eq"></canvas></div></div><p class="note" id="nT3Eq"></p>
+        <button class="btn sec xs chart-export" data-chart="t3Eq" data-title="Equipe">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Gerente</p><p class="ch-s">Todos os gerentes do recorte (pode haver mais de um por equipe); restringe conforme a seleção acima.</p>
+        <div class="cbox tall scroll" id="boxT3Ger"><div class="cbox-inner" id="innerT3Ger"><canvas id="t3Ger"></canvas></div></div><p class="note" id="nT3Ger"></p>
+        <button class="btn sec xs chart-export" data-chart="t3Ger" data-title="Gerente">Exportar Excel</button></div>
+    </div>
+    <div class="grid two" style="align-items:start;margin-top:14px">
+      <div class="card"><p class="ch-t">Corretor</p><p class="ch-s">Todos os corretores (responsáveis) do recorte; restringe se um gerente estiver selecionado acima.</p>
+        <div class="cbox tall scroll" id="boxT3Corr"><div class="cbox-inner" id="innerT3Corr"><canvas id="t3Corr"></canvas></div></div><p class="note" id="nT3Corr"></p>
+        <button class="btn sec xs chart-export" data-chart="t3Corr" data-title="Corretor">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Cliente</p><p class="ch-s">Todos os clientes do recorte, do cadastro mais antigo pro mais recente — altura da barra é há quantos dias foi cadastrado.</p>
+        <div class="cbox tall scroll" id="boxT3Cli"><div class="cbox-inner" id="innerT3Cli"><canvas id="t3Cli"></canvas></div></div><p class="note" id="nT3Cli"></p>
+        <button class="btn sec xs chart-export" data-chart="t3Cli" data-title="Cliente">Exportar Excel</button></div>
+    </div>
+    <div class="card" id="t3DetalheBox" style="display:none;margin-top:14px">
+      <p class="ch-t">Dados do cliente selecionado</p>
+      <div id="t3Detalhe"></div>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="gerente">
+    <h2 class="sec">Meu time</h2>
+    <div class="card"><p class="ch-t">Meu time</p><p class="ch-s">Escolha seu nome para ver os dados do seu time.</p>
+      <select id="gerSel"><option value="">Selecione seu nome…</option></select>
+      <p class="note" id="nGerSel"></p></div>
+
+    <div id="gerGate" style="display:none">
+
+      <h2 class="sec">Visão geral do time</h2>
+      <div class="grid kpis" id="gerKpis"></div>
+
+      <h2 class="sec">Corretores vinculados</h2>
+      <div class="card"><p class="ch-t">Volume por corretor</p><p class="ch-s">Todos os corretores do seu time.</p>
+        <p class="hint">Clique numa barra para filtrar o painel por aquele corretor.</p>
+        <div class="cbox tall scroll" id="boxGerCorr"><div class="cbox-inner" id="innerGerCorr"><canvas id="cGerCorr"></canvas></div></div><p class="note" id="nGerCorr"></p>
+        <button class="btn sec xs chart-export" data-chart="cGerCorr" data-title="Volume por corretor">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Desempenho por corretor</p><p class="ch-s">Mesmos critérios da aba Ranking, aplicados só ao seu time.</p>
+        <div class="tbar" data-table="tGerCorr" data-name="desempenho_por_corretor" data-title="Desempenho por corretor"></div>
+        <div class="tw"><table id="tGerCorr"></table></div>
+        <p class="note" id="nGerCorrTbl"></p></div>
+
+      <h2 class="sec">Pontos de melhoria</h2>
+      <div class="grid three" id="gerAlerts"></div>
+      <div class="card"><p class="ch-t">Onde agir primeiro</p><p class="ch-s">Um corretor por linha, com as 4 pendências de pasta e a conversão individual.</p>
+        <div class="tw"><table id="tGerAtencao"></table></div>
+        <p class="note" id="nGerAtencao"></p></div>
+      <div class="card"><p class="ch-t">Cadastros com pendência</p><p class="ch-s">Falta de Pix, documentos, ficha comercial incompleta e estagnação, no seu time.</p>
+        <div class="tbar" data-table="tGerAcao" data-name="cadastros_para_acao" data-title="Cadastros que exigem ação"></div>
+        <div class="tw"><table id="tGerAcao"></table></div>
+        <p class="note" id="nGerAcao"></p></div>
+
+    </div>
+  </section>
+
+  <section class="panel" data-tab="previsao">
+    <h2 class="sec">Previsão x Execução</h2>
+    <p class="hint">Meta de vendas por imobiliária/equipe (previsão acumulada do funil inteiro, sem período — planilha fornecida pelo usuário em 09/09/2026) contra os cadastros de fato no CRM. "Execução" conta todo cadastro da base, em qualquer etapa. Esta aba não segue os filtros do topo: a meta é sempre do funil inteiro, então compará-la com um recorte parcial (ex.: só um mês) daria uma leitura errada.</p>
+    <div class="grid kpis" id="prevKpis"></div>
+
+    <h2 class="sec">Meta x execução por imobiliária</h2>
+    <div class="card"><p class="ch-t">Meta x execução</p><p class="ch-s">Soma das metas de todas as equipes de cada imobiliária contra o total de cadastros dessa imobiliária na base inteira.</p>
+      <div class="cbox tall"><canvas id="cPrevImob"></canvas></div><p class="note" id="nPrevImob"></p>
+      <button class="btn sec xs chart-export" data-chart="cPrevImob" data-title="Meta x execução por imobiliária">Exportar Excel</button></div>
+
+    <h2 class="sec">Detalhamento por equipe</h2>
+    <div class="card"><p class="ch-s">Uma linha por equipe da planilha de previsão. "Gerente (previsão)" é o nome informado na meta — pode não ser o mesmo nome que aparece no cadastro no CRM (a planilha de metas e a ficha do CRM nem sempre concordam sobre quem é o gerente de cada equipe).</p>
+      <div class="tbar" data-table="tPrev" data-name="previsao_x_execucao" data-title="Previsão x Execução por equipe"></div>
+      <div class="tw"><table id="tPrev"></table></div>
+      <p class="note" id="nPrev"></p></div>
+
+    <h2 class="sec">Cadastros fora da previsão</h2>
+    <div class="card"><p class="ch-s">Equipes com cadastros reais no CRM sem linha correspondente na planilha de meta, e a categoria "Mercado" inteira (imobiliárias fora das 6 parceiras), que não tem meta definida.</p>
+      <div class="tbar" data-table="tPrevFora" data-name="fora_da_previsao" data-title="Cadastros fora da previsão"></div>
+      <div class="tw"><table id="tPrevFora"></table></div>
+      <p class="note" id="nPrevFora"></p></div>
+  </section>
+
+  <section class="panel" data-tab="previsao2">
+    <h2 class="sec">Previsão x Execução — por Imobiliária</h2>
+    <p class="hint">Expectativa de cadastros por imobiliária, planilha "Expectativa de vendas - SIENA" (Lançadoras e Mercado, fornecida pelo usuário em 11/09/2026) — meta acumulada do funil inteiro, sem período. Cada imobiliária (as 6 Lançadoras e cada uma do Mercado) tem sua própria meta. Esta aba não segue os filtros do topo (a meta é sempre do funil inteiro; um recorte por período daria leitura errada) — <strong>exceto o filtro "Imobiliária"</strong>, que restringe esta tela a só Lançadoras ou só Mercado.</p>
+    <div class="grid kpis" id="prev2Kpis"></div>
+
+    <h2 class="sec">Quem está mais perto da expectativa</h2>
+    <div class="card"><p class="ch-t">Meta x execução por imobiliária</p><p class="ch-s">Lançadoras e Mercado juntos, ordenados da imobiliária mais próxima (ou acima) da meta para a mais distante.</p>
+      <div class="cbox tall scroll" id="boxPrev2Imob"><div class="cbox-inner" id="innerPrev2Imob"><canvas id="cPrev2Imob"></canvas></div></div><p class="note" id="nPrev2Imob"></p>
+      <button class="btn sec xs chart-export" data-chart="cPrev2Imob" data-title="Meta x execução por imobiliária (SIENA)">Exportar Excel</button></div>
+
+    <h2 class="sec">Detalhamento por imobiliária</h2>
+    <div class="card"><p class="ch-s">Uma linha por imobiliária da planilha SIENA (Lançadoras e Mercado juntas).</p>
+      <div class="tbar" data-table="tPrev2" data-name="previsao_x_execucao_imobiliaria" data-title="Previsão x Execução por imobiliária"></div>
+      <div class="tw"><table id="tPrev2"></table></div>
+      <p class="note" id="nPrev2"></p></div>
+
+    <h2 class="sec">Cadastros fora da previsão</h2>
+    <div class="card"><p class="ch-s">Equipes do Mercado com cadastros reais no CRM sem imobiliária correspondente na planilha SIENA.</p>
+      <div class="tbar" data-table="tPrev2Fora" data-name="fora_da_previsao_imobiliaria" data-title="Cadastros fora da previsão"></div>
+      <div class="tw"><table id="tPrev2Fora"></table></div>
+      <p class="note" id="nPrev2Fora"></p></div>
+  </section>
+
+  <section class="panel" data-tab="superMeta">
+    <h2 class="sec">Super Meta — campanha Setembro a Dezembro/2026</h2>
+    <p class="hint">Campanha de metas <b>mensais</b> por imobiliária, planilha "Super Meta Siena.xlsx" (fornecida pelo usuário em 18/09/2026): cada imobiliária tem uma <b>Meta</b> e uma <b>Super Meta</b> (patamar acima) por mês — Setembro, Outubro, Novembro e Dezembro/2026 — além do total da campanha inteira. Cobre as 6 Lançadoras e 34 imobiliárias do Mercado, incluindo 5 que na aba "Previsão x Execução" ficavam em "Cadastros fora da previsão" (Valus, Tyrone, Home, Claudino e Castel). Diferente daquela aba (meta acumulada, sem período), aqui a meta é mensal — por isso o período abaixo é próprio desta aba, independente dos filtros de mês do topo.</p>
+
+    <div class="card"><label for="smPeriodo">Período da campanha</label>
+      <select id="smPeriodo">
+        <option value="0">Setembro/2026</option>
+        <option value="1">Outubro/2026</option>
+        <option value="2">Novembro/2026</option>
+        <option value="3">Dezembro/2026</option>
+        <option value="campanha">Campanha inteira (Set–Dez/2026)</option>
+      </select></div>
+
+    <div class="grid kpis" id="smKpis"></div>
+
+    <h2 class="sec">Quem está mais perto da Super Meta</h2>
+    <div class="card"><p class="ch-t">Super Meta x execução por imobiliária</p><p class="ch-s">Barra clara = Super Meta (teto do período). Barra colorida = execução: verde atingiu a Super Meta, azul atingiu ao menos a Meta, laranja ficou abaixo da Meta.</p>
+      <div class="cbox tall scroll" id="boxSmImob"><div class="cbox-inner" id="innerSmImob"><canvas id="cSmImob"></canvas></div></div><p class="note" id="nSmImob"></p>
+      <button class="btn sec xs chart-export" data-chart="cSmImob" data-title="Super Meta x execução por imobiliária">Exportar Excel</button></div>
+
+    <h2 class="sec">Detalhamento por imobiliária</h2>
+    <div class="card"><p class="ch-s">Uma linha por imobiliária da planilha Super Meta (Lançadoras e Mercado juntas), no período selecionado acima. "Base Zero" é o histórico de referência da planilha — informativo, não é meta.</p>
+      <div class="tbar" data-table="tSm" data-name="super_meta_imobiliaria" data-title="Super Meta por imobiliária"></div>
+      <div class="tw"><table id="tSm"></table></div>
+      <p class="note" id="nSm"></p></div>
+
+    <h2 class="sec">Cadastros fora da Super Meta</h2>
+    <div class="card"><p class="ch-s">Equipes do Mercado com cadastros reais no CRM no período selecionado, sem imobiliária correspondente na planilha Super Meta.</p>
+      <div class="tbar" data-table="tSmFora" data-name="fora_da_super_meta" data-title="Cadastros fora da Super Meta"></div>
+      <div class="tw"><table id="tSmFora"></table></div>
+      <p class="note" id="nSmFora"></p></div>
+  </section>
+
+  <section class="panel" data-tab="rank">
+    <h2 class="sec">Ranking</h2>
+    <div class="card">
+      <div class="rkbar">
+        <div class="f" style="flex:0 0 auto">
+          <label>Rankear</label>
+          <div class="seg" id="rkTipo">
+            <button data-v="marca" aria-pressed="true">Lançadoras</button>
+            <button data-v="responsavel" aria-pressed="false">Corretores</button>
+          </div>
+        </div>
+        <div class="f" style="min-width:250px;flex:0 0 auto">
+          <label for="rkMet">Critério de classificação</label>
+          <select id="rkMet"></select>
+        </div>
+        <div class="f" style="min-width:170px;flex:0 0 auto">
+          <label for="rkMin">Mínimo de cadastros</label>
+          <select id="rkMin">
+            <option value="0">Sem mínimo</option>
+            <option value="3">3 ou mais</option>
+            <option value="5">5 ou mais</option>
+            <option value="10">10 ou mais</option>
+          </select>
+        </div>
+      </div>
+      <p class="hint" style="margin:12px 0 0">Clique no pódio, na barra ou na linha da tabela para filtrar o painel inteiro por aquele colocado.</p>
+      <p class="note" id="rkNota" style="margin-top:6px"></p>
+    </div>
+
+    <h2 class="sec">Pódio</h2>
+    <div class="podium" id="rkPod"></div>
+
+    <h2 class="sec">Os 10 primeiros</h2>
+    <div class="card"><p class="ch-t" id="rkChTit">Top 10</p><p class="ch-s" id="rkChSub"></p>
+      <div class="cbox xtall"><canvas id="cRank"></canvas></div></div>
+
+    <h2 class="sec">Classificação completa</h2>
+    <div class="card">
+      <p class="ch-s" id="rkTbSub"></p>
+      <div class="tbar" data-table="tRank" data-name="ranking" data-title="Ranking"></div>
+      <div class="tw"><table id="tRank"></table></div>
+      <p class="note" id="nRank"></p>
+    </div>
+  </section>
+
+  <section class="panel" data-tab="perfil">
+    <h2 class="sec">Valores</h2>
+    <div class="grid two">
+      <div class="card"><p class="ch-t">Distribuição do valor de renda</p><p class="ch-s">Renda declarada na ficha. Use a mediana — a base tem muitos zeros.</p>
+        <p class="hint">Clique numa faixa para filtrar por ela.</p>
+        <div class="cbox tall"><canvas id="cRenda"></canvas></div><p class="note" id="nRenda"></p>
+        <button class="btn sec xs chart-export" data-chart="cRenda" data-title="Distribuição do valor de renda">Exportar Excel</button></div>
+      <div class="card"><p class="ch-t">Finalidade da compra</p><p class="ch-s">Declaração informada no cadastro.</p>
+        <div class="cbox tall"><canvas id="cFin"></canvas></div><p class="note" id="nFin"></p>
+        <button class="btn sec xs chart-export" data-chart="cFin" data-title="Finalidade da compra">Exportar Excel</button></div>
+    </div>
+    <h2 class="sec">Qualidade do cadastro</h2>
+    <div class="card"><p class="ch-t">Preenchimento da ficha</p><p class="ch-s">Quanto de cada informação existe na base filtrada. Indicadores independentes — um mesmo cadastro pode contar em várias barras ao mesmo tempo, por isso a soma das porcentagens passa de 100%.</p>
+      <div class="cbox tall"><canvas id="cQual"></canvas></div><p class="note" id="nQual"></p>
+      <button class="btn sec xs chart-export" data-chart="cQual" data-title="Preenchimento da ficha">Exportar Excel</button></div>
+  </section>
+
+  <section class="panel" data-tab="alertas">
+    <h2 class="sec">Pontos de atenção</h2>
+    <p class="hint">Considera só cadastros em Cadastro Cliente, Pasta em Anállise ou Pasta com Pendência — pastas já concluídas (Validada/Aprovada) ou Desistente ficam fora. Clique num card para restringir a tabela abaixo a esse motivo; Ctrl/Cmd+clique acumula mais de um.</p>
+    <div class="grid three" id="alerts"></div>
+    <h2 class="sec">Cadastros que exigem ação</h2>
+    <div class="card">
+      <p class="ch-s">Pix pendente, sem tag, sem e-mail, estagnação, possível duplicidade e corretor sem aprovação — no recorte atual, restrito a Cadastro Cliente / Pasta em Anállise / Pasta com Pendência.</p>
+      <div class="tbar" data-table="tAcao" data-name="cadastros_para_acao" data-title="Cadastros que exigem ação"></div>
+      <div class="tw"><table id="tAcao"></table></div>
+      <p class="note" id="nAcao"></p></div>
+  </section>
+
+  <section class="panel" data-tab="base">
+    <h2 class="sec">Base de Cadastros</h2>
+    <div class="card">
+      <div class="tbar" data-table="tLeads" data-name="base_de_cadastros" data-title="__BASE_TITLE__">
+        <input type="search" id="q" placeholder="Buscar nome, telefone, e-mail, equipe…" style="max-width:280px">
+      </div>
+      <div class="tw"><table id="tLeads"></table></div>
+      <p class="note" id="nLeads"></p></div>
+  </section>
+
+  </div>
+
+  <footer>
+    <b>Fonte:</b> __FONTE__ Extração em __EXTRACAO__.<br>
+    <b>Método:</b> tags lidas do seletor de marcações da ficha de cada cadastro (somente as marcadas); “Plano de pagamento” é campo personalizado e conta separado das tags. Um cadastro pode ter várias tags, então a soma das tags é maior que o total de cadastros. Rendas vazias ou zeradas ficam fora da mediana. Valor do Negócio foi descartado por estar zerado na quase totalidade dos cadastros.<br>
+    <b>Desistentes</b> aparecem no painel (inclusive com card próprio na Visão Geral) mas <b>não contam na quantidade total de leads/cadastros</b> — ficam fora de todo indicador, gráfico e percentual do recorte, a menos que o filtro Etapa seja definido explicitamente para “Desistente”.<br>
+    <b>Exportações</b> respeitam sempre os filtros, a ordenação e a busca ativos no momento do clique.<br>
+    <span id="fMeta"></span>
+  </footer>
+</div>
