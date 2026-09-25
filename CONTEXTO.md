@@ -118,7 +118,9 @@ Público-alvo: ~20 usuários internos. Não há backend, banco de dados nem buil
 
 ---
 
-## 3. A base extraída (24/09/2026 14:51, extração mais recente — histórico das extrações anteriores no fim da seção)
+## 3. A base extraída (24/09/2026 16:55, extração mais recente — histórico das extrações anteriores no fim da seção)
+
+**38ª extração, via skill `atualizar_servidor_huna` (24/09/2026 16:55, 184 cadastros — 1 novo/5 sumiu frente à 37ª) — publicada junto com a 5ª extração do Funil de Venda (`funilvendas.html`), commit `a83f651`.** Etapas: Cadastro Cliente 41 · Pasta em Anállise 1 · Pasta com Pendência 58 · Pasta Validada pendente de Pix 52 · Pasta Aprovada com Pix 13 · Desistente 19 (soma = 184). **Conferência (integrada em `atualizar.py`):** somas por etapa/responsável/equipe = 184 ✓ · n_tags bate com tags_list nas 184 linhas (soma = 313) ✓ · nenhum lead_id duplicado ✓ · Previsão x Execução: 159 (execução) + 6 (fora) = 165 = total sem Desistentes (165) ✓ · sintaxe ok. Nenhuma correção necessária.
 
 **37ª extração, via skill `atualizar_servidor` (24/09/2026 14:51, 188 cadastros — 1 novo/17 sumiu frente à 36ª) — publicada junto com a 4ª extração do Funil de Venda (`funilvendas.html`), commit `d582155`.** Etapas: Cadastro Cliente 41 · Pasta em Anállise 10 · Pasta com Pendência 57 · Pasta Validada pendente de Pix 46 · Pasta Aprovada com Pix 15 · Desistente 19 (soma = 188). **Conferência (integrada em `atualizar.py`):** somas por etapa/responsável/equipe = 188 ✓ · n_tags bate com tags_list nas 188 linhas (soma = 313) ✓ · nenhum lead_id duplicado ✓ · Previsão x Execução: 163 (execução) + 6 (fora) = 169 = total sem Desistentes (169) ✓ · sintaxe ok. Nenhuma correção necessária. Segue a mesma tendência de queda das últimas rodadas (325→227→204→188) — não investigada a fundo, conferência interna sempre bate.
 

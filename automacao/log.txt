@@ -1597,3 +1597,34 @@ RESULTADO: tudo bateu, nenhuma correção necessária.
 [2026-09-24 14:51:21] resumo: 188 cadastros (1 novo(s), 17 sumiu/sumiram) · 313 marcações de tag · etapas: Cadastro Cliente=41, Desistente=19, Pasta Aprovada com Pix=15, Pasta Validada pendente de Pix=46, Pasta com Pendência=57, Pasta em Anállise=10
 [2026-09-24 14:51:21] ==== fim (sucesso, NÃO publicado) — 118.3s ====
 [2026-09-24 14:53:31] publicado em alexsborne/huna (funilpastas.html, funilvendas.html) — via skill atualizar_servidor.
+[2026-09-24 16:54:02] ==== início ==== (DRY_RUN=True, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-24 16:54:14] login ok
+[2026-09-24 16:55:35] extração de leads: 184 linha(s) bruta(s)
+[2026-09-24 16:55:35] buscando contato de 3 corretor(es) novo(s): ['Alencassia Alves Siqueira', 'João Paulo Mamede Rocha', 'Ludmilla Borges e Azevedo']
+[2026-09-24 16:55:49] aviso: 2 corretor(es) não encontrados na listagem de usuários: ['Alencassia Alves Siqueira', 'João Paulo Mamede Rocha']
+[2026-09-24 16:55:50] aviso: 2 cadastro(s) com corretor sem telefone/e-mail localizado no Imobmeet: ['133642', '135051']
+[2026-09-24 16:55:50] dados/rows.json gravado: 184 cadastros
+[2026-09-24 16:55:51] rebuild2.py: ok pasta 24/09/2026 16:55
+[2026-09-24 16:55:51] index.html regenerado (com metas noindex).
+[2026-09-24 16:55:51] conferência de qualidade/quantitativos:
+Total de cadastros (dados/rows.json): 184
+[ok]    soma por "etapa" = 184 (bate com o total)
+[ok]    soma por "responsavel" = 184 (bate com o total)
+[ok]    soma por "equipe" = 184 (bate com o total)
+[ok]    n_tags bate com tags_list em todas as 184 linhas (soma = 313)
+[ok]    nenhum lead_id duplicado
+[ok]    Previsão x Execução: execução mapeada (159) + fora da previsão (6) = 165 = total sem Desistentes (165)
+        imobiliárias/equipes de Mercado fora da planilha SIENA2 (informativo, não é erro por si só):
+          - NEXO GESTÃO: 3
+          - CASTEL IMOVEIS: 1
+          - VALUS IMOVEIS: 1
+          - MAVI IMOBILIARIA: 1
+[ok]    sintaxe ok nos 4 blocos <script> do HTML gerado
+
+RESULTADO: tudo bateu, nenhuma correção necessária.
+[2026-09-24 16:55:51] DRY_RUN=1 — pulando publicação no GitHub.
+[2026-09-24 16:55:51] resumo: 184 cadastros (1 novo(s), 5 sumiu/sumiram) · 313 marcações de tag · etapas: Cadastro Cliente=41, Desistente=19, Pasta Aprovada com Pix=13, Pasta Validada pendente de Pix=52, Pasta com Pendência=58, Pasta em Anállise=1
+[2026-09-24 16:55:51] ==== fim (sucesso, NÃO publicado) — 109.8s ====
+[2026-09-24 16:58:24] publicado em alexsborne/huna (funilpastas.html, funilvendas.html) — via skill atualizar_servidor_huna.
+[2026-09-24 17:59:02] ==== início ==== (DRY_RUN=False, LOGIN_MODE=auto, HEADLESS=True)
+[2026-09-24 17:59:14] login ok

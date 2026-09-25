@@ -66,3 +66,27 @@
 [2026-09-24 14:53:08] tags distintas encontradas (14): ['AD', 'Até 24x', 'Até 48x', 'BOLETO NEXO', 'CONTRATO DIGITAL', 'CONTRATO FÍSICO', 'Cliente BrDU', 'Em lançamento de venda', 'FALTA PIX', 'Lead Quente', 'PIX', 'Plano longo', 'SECNEXO', 'Venda à vista']
 [2026-09-24 14:53:08] gravado C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\dados\rows_vendas.json — 209 cadastro(s)
 [2026-09-24 14:53:08] ==== fim — 101.4s ====
+[2026-09-24 16:55:57] ==== início extração Funil de Venda — Village Siena ====
+[2026-09-24 16:56:08] login ok
+[2026-09-24 16:56:30] filtros aplicados (funil=126, produto=428)
+[2026-09-24 16:56:30] total anunciado: 216 (5 página(s))
+[2026-09-24 16:56:30] página 1/5: +50 (acc 50/216)
+[2026-09-24 16:56:35] página 2/5: +50 (acc 100/216)
+[2026-09-24 16:56:39] página 3/5: +50 (acc 150/216)
+[2026-09-24 16:56:44] página 4/5: +50 (acc 200/216)
+[2026-09-24 16:56:47] página 5/5: +16 (acc 216/216)
+[2026-09-24 16:56:47] linhas coletadas: 216
+[2026-09-24 16:56:47] produtos na coleta (deve ser só "85 VILLAGIO SIENA"): {"85 VILLAGIO SIENA": 216}
+[2026-09-24 16:56:47] fichas 40/216
+[2026-09-24 16:56:56] fichas 80/216
+[2026-09-24 16:57:05] fichas 120/216
+[2026-09-24 16:57:13] fichas 160/216
+[2026-09-24 16:57:21] fichas 200/216
+[2026-09-24 16:57:28] fichas 216/216
+[2026-09-24 16:57:31] fichas buscadas: 216
+[2026-09-24 16:57:31] buscando contato de 7 corretor(es) novo(s)
+[2026-09-24 16:58:02] aviso: 4 corretor(es) não encontrados na listagem de usuários: ['CLAUDEIR COELHO ROCHA', 'João Paulo Mamede Rocha', 'Leonardo Augusto Alves Rodrigues', 'Thaylize Vargas Martins']
+[2026-09-24 16:58:02] contatos.tsv atualizado com 3 novo(s)
+[2026-09-24 16:58:03] tags distintas encontradas (14): ['AD', 'Até 24x', 'Até 48x', 'BOLETO NEXO', 'CONTRATO DIGITAL', 'CONTRATO FÍSICO', 'Cliente BrDU', 'Em lançamento de venda', 'FALTA PIX', 'Lead Quente', 'PIX', 'Plano longo', 'SECNEXO', 'Venda à vista']
+[2026-09-24 16:58:03] gravado C:\Users\alexandre.lopes\OneDrive\huna_trabalho\etapa_2\relatorio_pastas\Nexo_Painel_Contexto_Completo\handoff\dados\rows_vendas.json — 216 cadastro(s)
+[2026-09-24 16:58:03] ==== fim — 125.8s ====
