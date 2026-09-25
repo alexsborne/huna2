@@ -349,7 +349,7 @@ td.pos{font-weight:700;color:var(--navy);text-align:center;width:64px}
 
   <section class="panel" data-tab="historico">
     <h2 class="sec">Histórico diário do Funil de Pasta</h2>
-    <p class="hint">O Imobmeet não guarda um histórico de estágio por dia — cada extração é só uma fotografia do funil no instante em que rodou. Os números abaixo vêm das 47 extrações automatizadas já registradas entre <b>04/09/2026</b> e <b>25/09/2026</b> (arquivo <code>automacao/log.txt</code>, cada rodada com conferência interna batendo — ver <code>CONTEXTO.md</code> seção 3). Não existe registro estruturado antes de 04/09/2026, por isso a série começa aí. <b>Esta aba não se atualiza sozinha</b>: pra incluir extrações futuras é preciso acrescentar uma linha nova em <code>HIST_RAW</code> (no código-fonte desta página) a cada rodada.</p>
+    <p class="hint">O Imobmeet não guarda um histórico de estágio por dia — cada extração é só uma fotografia do funil no instante em que rodou. Os números abaixo vêm das 48 extrações automatizadas já registradas entre <b>04/09/2026</b> e <b>25/09/2026</b> (arquivo <code>automacao/log.txt</code>, cada rodada com conferência interna batendo — ver <code>CONTEXTO.md</code> seção 3). Não existe registro estruturado antes de 04/09/2026, por isso a série começa aí. <b>Esta aba não se atualiza sozinha</b>: pra incluir extrações futuras é preciso acrescentar uma linha nova em <code>HIST_RAW</code> (no código-fonte desta página) a cada rodada.</p>
     <div class="card"><p class="ch-t">Selecionar dia</p><p class="ch-s">Cada dia mostra a última extração feita naquele dia (a fotografia mais completa). Dias sem extração (fins de semana, principalmente) não têm ponto na série.</p>
       <select id="histDia" style="max-width:420px"></select></div>
 
@@ -3015,7 +3015,8 @@ const HIST_RAW=[
  histRow('2026-09-24 14:51',188, 41,10,57,46,15,19, 1,17,313),
  histRow('2026-09-24 16:55',184, 41,1,58,52,13,19, 1,5,313),
  histRow('2026-09-25 10:40',179, 40,0,59,52,9,19, 1,6,302),
- histRow('2026-09-25 18:00',175, 40,0,59,50,7,19, 0,4,291)
+ histRow('2026-09-25 18:00',175, 40,0,59,50,7,19, 0,4,291),
+ histRow('2026-09-25 20:03',176, 41,0,59,50,7,19, 1,0,291)
 ];
 function histDayKey(ts){ return ts.slice(0,10); }
 /* último ponto de cada dia = a fotografia mais completa daquele dia (mesma regra usada no
